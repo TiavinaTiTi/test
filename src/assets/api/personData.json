@@ -1,0 +1,26 @@
+[
+  {
+    "idPerson": 1,
+    "image": {
+      "id": 1,
+      "name": "profile_pic.jpg",
+      "type": "image/jpeg",
+      "image": "[255, 216, /* ... fake image data ... */]"
+    },
+    "name": "Doe",
+    "firstName": "John",
+    "post": "Software Developer"
+  },
+  {
+    "idPerson": 2,
+    "image": {
+      "id": 2,
+      "name": "avatar.png",
+      "type": "image/png",
+      "image": "[137, 80, /* ... fake image data ... */]"
+    },
+    "name": "Smith",
+    "firstName": "Alice",
+    "post": "UI/UX Designer"
+  }
+]

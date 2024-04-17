@@ -1,0 +1,59 @@
+<div class="row pt-4">
+  <div class="col-lg-8">
+    <div class="card">
+      <div class="card-body">
+        <full-calendar [options]="calendarOptions"></full-calendar>
+        <div class="" id="info"></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-body">
+        <h4>Nouveau mission</h4>
+        {{ formsMission.value | json }}
+        <form [formGroup]="formsMission" (ngSubmit)="onSumbit()">
+          <div class="form-floating my-1">
+            <input type="text" formControlName="person" class="form-control" id="person" placeholder="Saisir le nom personne">
+            <label for="person" class="form-label">Attribuer</label>
+          </div>
+
+          <div class="form-floating my-1">
+            <input type="text" formControlName="title" class="form-control" id="title" placeholder="Saisir le titre...">
+            <label for="title" class="form-label">Saisir le titre</label>
+          </div>
+          <div class="form-floating my-1">
+            <input type="color" formControlName="color" class="form-control form-control-color w-100" id="color" value="{{ formsMission.value.color }}" title="Choose your color">
+            <label for="color" class="form-label">Code couleur</label>
+          </div>
+          <div class="row row-cols-2">
+            <div class="col">
+              <div class="form-floating my-1">
+                <input type="date" formControlName="startDate" class="form-control" id="dateIn" placeholder="Saisir le titre...">
+                <label for="dateIn" class="form-label">Date de debut</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-floating my-1">
+                <div class="form-floating my-1">
+                  <input type="date" formControlName="endDate" class="form-control" id="dateOut" placeholder="Saisir le titre...">
+                  <label for="dateIn" class="form-label">Date de fin</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-floating my-1">
+            <textarea formControlName="description" class="form-control" id="description" placeholder="Saisir la decription" rows="3" style="height: 100px"></textarea>
+            <label for="description">Description</label>
+          </div>
+          <div class="mt-4">
+            <button type="submit" [disabled]="formsMission.invalid" class="btn btn-primary w-100">Sauvegarder</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
